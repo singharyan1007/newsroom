@@ -1,16 +1,19 @@
 import React from 'react'
 import NewsList from './components/NewsList'
-import SearchForm from './components/SearchForm'
-import Navbar from './components/Navbar'
 import CardSlider from './components/CardSlider'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Sidebar from './components/Sidebar'
+import Home from './components/Home'
 function App() {
   return (
-<div className='App'>
-  <Navbar/>
+<>
+<Home/>
+<Sidebar/>
+  
   <CardSlider/>
+  
+  {/* <Sidebar/> */}
   <NewsList/>
-</div>
+</>
    
   )
 }

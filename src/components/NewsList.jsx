@@ -1,8 +1,10 @@
 import React, { useEffect,useState } from 'react'
 import axios from 'axios'
 import NewsItem from './NewsItem';
-
+// import { useGlobalContext } from '../context';
+// import { FaBars } from 'react-icons/fa';
 const NewsList=()=> {
+  // const { openSidebar } = useGlobalContext();
   const [articles,setArticles]=useState([]);
   const [query,setQuery]=useState('technology');
  useEffect(()=>{
@@ -16,6 +18,9 @@ const NewsList=()=> {
 },[]);
 return (
   <div>
+    {/* <button onClick={openSidebar} className='sidebar-toggle'>
+        <FaBars />
+      </button> */}
     <form className='search-form' onSubmit={(e) => e.preventDefault()}>
     <h2>Search your news...</h2>
     <input
